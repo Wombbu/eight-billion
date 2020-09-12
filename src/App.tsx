@@ -1,37 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Title} from './components/Title';
+import "./index.css";
 import tw from "tailwind.macro";
 
-const AppStyles = styled.div.attrs({
-  className: "w-full h-screen flex flex-col items-center justify-center"
-})`
-  & {
-    h1 {
-      ${tw`font-sans text-6xl font-hairline text-6xl text-teal-500`}
-    }
-    p {
-      ${tw`text-gray-700 text-lg`}
-    }
-    h2 {
-      ${tw`text-2xl font-hairline mt-5 text-teal-500`}
-    }
-    ul {
-      ${tw`inline-flex`}
-    }
-    li {
-      ${tw`mr-5`}
-    }
-    a {
-      ${tw`text-blue-500 hover:text-gray-500 hover:underline`}
-    }
-  }
+const AppStyles = styled.div`
 `;
 
 function App() {
   return (
-    <AppStyles>
-      <h1>8 Miljardia</h1>
-      <p> Nonniih </p>
+    <AppStyles className="w-full m-auto max-w-md flex flex-col items-center">
+      <Title primary="8 Miljardia" secondary="Autoilijat maksavat Suomeen vuosittain kahdeksan miljardia euroa veroina. Katsotaan mistä summa koostuu." />
+      <Title primary="Verotuotto" secondary="Autoilusta kerätään veroja. Autoliiton laskelmien mukaan verotuotto jakautuu seuraavalla tavalla" />
     </AppStyles>
   );
 }
