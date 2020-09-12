@@ -1,25 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
+import tw from "tailwind.macro";
 
-const Body = styled.div`
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1024px;
-`;
-
-const Title = styled.h1`
-  padding-top: 32px;
-  padding-bottom: 32px;
-  
+const AppStyles = styled.div.attrs({
+  className: "w-full h-screen flex flex-col items-center justify-center"
+})`
+  & {
+    h1 {
+      ${tw`font-sans text-6xl font-hairline text-6xl text-teal-500`}
+    }
+    p {
+      ${tw`text-gray-700 text-lg`}
+    }
+    h2 {
+      ${tw`text-2xl font-hairline mt-5 text-teal-500`}
+    }
+    ul {
+      ${tw`inline-flex`}
+    }
+    li {
+      ${tw`mr-5`}
+    }
+    a {
+      ${tw`text-blue-500 hover:text-gray-500 hover:underline`}
+    }
+  }
 `;
 
 function App() {
   return (
-    <Body>
-      <Title> 8 miljardia </Title>
-    </Body>
+    <AppStyles>
+      <h1>8 Miljardia</h1>
+      <p> Nonniih </p>
+    </AppStyles>
   );
 }
 
