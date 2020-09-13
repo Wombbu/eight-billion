@@ -92,27 +92,23 @@ function App() {
             {
               value: 3269,
               title: "Alv ja vakuutusverot",
-              color: "green",
               description:
                 "Arvonlisävero kerätään jokaisesta Suomessa ostetusta tavarasta, muun muassa ruoasta.",
             },
             {
               value: 2635,
               title: "Polttoainevero",
-              color: "pink",
               description:
                 "Polttoainevero on kiinteä vero polttoaineiden hinnassa.",
             },
             {
               value: 1150,
               title: "Ajoneuvovero",
-              color: "blue",
               description: "Ajoneuvovero kerätään vuosittain ajoneuvoista.",
             },
             {
               value: 892,
               title: "Autovero",
-              color: "red",
               description: "Autovero kerätään uusista autoista ostohetkellä.",
             },
           ]}
