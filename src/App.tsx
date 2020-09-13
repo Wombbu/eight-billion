@@ -22,6 +22,7 @@ const AppStyles = styled.div.attrs((p) => ({
   & a {
     ${tw`text-indigo-500`}
     white-space: nowrap;
+    font-weight: bold;
   }
 
   & a:hover {
@@ -34,27 +35,54 @@ function App() {
     <AppStyles>
       <Section
         title="8 Miljardia"
-        description="Autoilijat maksavat Suomeen vuosittain kahdeksan miljardia euroa veroina."
+        description={
+          <>
+            Autoilijat maksavat Suomeen vuosittain <b>kahdeksan miljardia</b>{" "}
+            euroa veroina.
+          </>
+        }
       ></Section>
       <Section
         title="Tienpitoon miljardi"
-        description="Autoliiton mukaan tästä summasta tienpitoon palaa kuitenkin vain miljardi."
+        description={
+          <>
+            Autoliiton mukaan tästä summasta tienpitoon palaa kuitenkin{" "}
+            <a
+              href="https://www.autoliitto.fi/tietoa-tienkayttajalle/vaalit"
+              target="blank"
+            >
+              vain miljardi
+            </a>
+            . Tarkemmin 1.4 miljardia.
+          </>
+        }
       />
       <Section
         showTitleDesc
         title={
           <>
-            <Countdown from={8} to={7} inMs={800} /> Miljardia
+            <Countdown from={8} to={6.6} inMs={800} /> Miljardia
           </>
         }
-        description="7 miljardia nettomaksua. Autoilija näyttää olevan todellinen nettomaksaja. Nyt perataan asia juurta jaksain."
+        description={
+          <>
+            <b>Lähes 7 miljardia nettomaksua</b>. Autoilija näyttää olevan
+            todellinen nettomaksaja. Nyt perataan asia juurta jaksain.
+          </>
+        }
       />
       <Section
         title="Verotuotto"
         description={
           <>
-            Autoalan tiedotuskeskuksen laskelmien mukaan kahdeksan miljardia
-            jakautuu seuraavalla tavalla. <br />
+            Autoalan tiedotuskeskuksen{" "}
+            <a
+              href="http://www.aut.fi/etusivu_vanha/tilastot/verotus_ja_hintakehitys/valtion_verotulot_tieliikenteesta"
+              target="blank"
+            >
+              laskelmien mukaan
+            </a>{" "}
+            kahdeksan miljardia jakautuu seuraavalla tavalla. <br /> <br />
             Paina kenttiä nähdäksesi lisätietoa
           </>
         }
@@ -63,7 +91,7 @@ function App() {
           items={[
             {
               value: 3269,
-              title: "Alv",
+              title: "Alv ja vakuutusverot",
               color: "green",
               description:
                 "Arvonlisävero kerätään jokaisesta Suomessa ostetusta tavarasta, muun muassa ruoasta.",
@@ -92,15 +120,19 @@ function App() {
       </Section>
       <Section
         title="Alv?"
-        description="Laskelmissa on laskettu mukaan arvonlisävero. Arvonlisäveroa maksetaan muun muassa ruoista, vaatteista sekä asumisesta"
+        description="Laskelmissa on laskettu mukaan arvonlisävero sekä vakuutusverot. Arvonlisäveroa maksetaan muun muassa ruoista, vaatteista sekä asumisesta. Vakuutusveroa maksetaan kaikista vakuutuksista, esimerkiksi kotivakuutuksesta"
       ></Section>
       <Section
         description={
           <>
-            Esimerkiksi vaatteista maksettua arvonlisäveroa (4 miljardia) ei
-            palauteta vaatteidenkäytön tukemiseen.
+            Vaatteista maksettua arvonlisäveroa ei palauteta vaatteidenkäytön
+            tukemiseen.
+            <br /> Tietotekniikasta maksettua arvonlisäveroa ei palauteta
+            tietotekniikan käytön tukemiseen.
             <br />
             <br />
+            Täten on kohtuutonta vaatia, että kaikista liiketoimintasektoreista
+            juuri autoilusta maksettu alv korvamerkittäisiin autoiluun.
             Poistetaan arvonlisävero nettomaksusta.
           </>
         }
@@ -109,19 +141,7 @@ function App() {
         showTitleDesc
         title={
           <>
-            <Countdown from={7} to={3.7} inMs={1500} /> Miljardia
-          </>
-        }
-      />
-      <Section
-        title="Autoliitto"
-        description="Autoliiton mukaan valtio laittaa vuosittain vain miljardin tiestöön. Todellinen luku on kaksi miljardia."
-      />
-      <Section
-        showTitleDesc
-        title={
-          <>
-            <Countdown from={3.7} to={2.7} inMs={800} /> Miljardia
+            <Countdown from={6.6} to={3.3} inMs={1500} shortDelay /> Miljardia
           </>
         }
       />
@@ -135,7 +155,7 @@ function App() {
               target="blank"
               href="http://liikennejarjestelma.fi/talous-ja-tehokkuus/kustannukset/liikenteen-ulkoiset-kustannukset/"
             >
-              2 miljardia euroa
+              <b>2 miljardia euroa</b>
             </a>
             .
           </>
@@ -145,72 +165,7 @@ function App() {
         showTitleDesc
         title={
           <>
-            <Countdown from={2.7} to={0.7} inMs={800} /> Miljardia
-          </>
-        }
-      />
-      <Section
-        title="Kunnat"
-        description={
-          <>
-            Valtio hoitaa vain pääteitä. Kunnat rakentavat omalla rahallaan
-            tiestönsä. Kunnat rahoittavat tiestönsä kunnallisverolla. Vuonna
-            2017 kunnat käyttivät tienpitoon n. 700 miljoonaa euroa. Tästä n.
-            70%, eli puoli miljardia menee autoiluun
-          </>
-        }
-      ></Section>
-      <Section
-        showTitleDesc
-        title={
-          <>
-            <Countdown from={0.7} to={0.2} inMs={800} /> Miljardia
-          </>
-        }
-      />
-      <Section
-        title="Matkakuluvähennys"
-        description={
-          <>
-            Matkakuluista vähennetään verotuksessa puoli miljardia vuosittain.
-          </>
-        }
-      ></Section>
-      <Section
-        showTitleDesc
-        title={
-          <>
-            <Countdown from={0.2} to={-0.3} inMs={800} /> Miljardia
-          </>
-        }
-        description="Nettosaajaksi mentiin. Autoliitto valehtelee räikeästi"
-      />
-      <Section
-        title="Asumisen hinta"
-        description={
-          <>
-            Parkkinormien vuoksi esimerkiksi Helsingin kantakaupungissa
-            autopaikan rakennuskustannukset voivat olla 70 000 euroa paikkaa
-            kohti. Paikat eivät mene tuolla hinnalla kaupaksi, joten paikoista
-            tullut tappio leivotaan asuntojen hintoihin
-          </>
-        }
-      ></Section>
-      <Section
-        title="Rakennuttajat"
-        description={
-          <>
-            Rakennusyritykset vastustavat parkkinormia. Se kasvattaa asumisen
-            hintaa. Paikkoja ei rakenneta markkinavetoisesti, vaan
-            valtiovetoisesti.
-          </>
-        }
-      ></Section>
-      <Section
-        showTitleDesc
-        title={
-          <>
-            <Countdown from={-0.3} to={-0.4} inMs={100} /> Miljardia
+            <Countdown from={3.3} to={1.3} inMs={800} shortDelay /> Miljardia
           </>
         }
       />
@@ -224,7 +179,13 @@ function App() {
             hiukkasiin.
             <br />
             <br />
-            Hinta yhteiskunnalle puoli miljardia vuodessa
+            Hinta yhteiskunnalle{" "}
+            <a
+              href="http://liikennejarjestelma.fi/talous-ja-tehokkuus/kustannukset/liikenteen-ulkoiset-kustannukset/"
+              target="blank"
+            >
+              puoli miljardia vuodessa
+            </a>
           </>
         }
       ></Section>
@@ -232,9 +193,85 @@ function App() {
         showTitleDesc
         title={
           <>
-            <Countdown from={-0.4} to={-0.9} inMs={800} /> Miljardia
+            <Countdown from={1.3} to={0.8} inMs={800} shortDelay /> Miljardia
           </>
         }
+      />
+      <Section
+        title="Kunnat"
+        description={
+          <>
+            Valtio hoitaa vain pääteitä. Kunnat rakentavat omalla rahallaan
+            tiestönsä. Kunnat rahoittavat tiestönsä kunnallisverolla. Vuonna
+            2017 kunnat käyttivät tienpitoon n. 700 miljoonaa euroa. Tästä
+            arviolta 70%, eli <b>puoli miljardia</b> menee autoiluun
+          </>
+        }
+      ></Section>
+      <Section
+        showTitleDesc
+        title={
+          <>
+            <Countdown from={0.8} to={0.2} inMs={800} shortDelay /> Miljardia
+          </>
+        }
+      />
+      <Section
+        title="Matkakuluvähennys"
+        description={
+          <>
+            Matkakuluista vähennetään verotuksessa <b>puoli miljardia</b>{" "}
+            vuosittain.
+          </>
+        }
+      ></Section>
+      <Section
+        showTitleDesc
+        title={
+          <>
+            <Countdown from={0.2} to={-0.3} inMs={800} shortDelay /> Miljardia
+          </>
+        }
+        description="Autoilun verot eivät kata siitä aiheutuvia kuluja. Jatketaan kuitenkin vielä."
+      />
+      <Section
+        title="Asumisen hinta"
+        description={
+          <>
+            Parkkinormien vuoksi esimerkiksi Helsingin kantakaupungissa
+            autopaikan rakennuskustannukset voivat olla 70 000 euroa paikkaa
+            kohti. Paikat eivät mene tuolla hinnalla kaupaksi, joten paikoista
+            tullut tappio leivotaan asuntojen hintoihin. Asumisen hintaa nostaa
+            myös melumittaukset sekä melueristäminen. Melu rajoittaa
+            huoneistosijoittelua kaupunkiasunnoissa. Kaupunkiasunnot ovat
+            autoliikenteen melun takia rajoittuneemmin suunniteltuja.
+            <br />
+            <br />
+            Rakennusteollisuus vastustaa parkkinormia. Paikkoja ei rakenneta
+            markkinavetoisesti, vaan valtiovetoisesti.
+          </>
+        }
+      ></Section>
+      <Section
+        description={
+          <>
+            Autoilun haitat keskittyvät kaupunkeihin. Etenkin kaupungeissa
+            autoilun vaatima tila, sen aiheuttama melu sekä turvattomuus
+            korostuvat. Tälle on vaikea asettaa hintaa, mutta:
+            <br />
+            <br />
+            <b>
+              Jokainen tietää miten viihtyisää 50-luvulla ja sitä ennen
+              rakennettu kaupunkiympäristö on. Ja miten epäviihtyisää 70 luvulla
+              ja myöhemmin autoilun ehdoilla rakennettu kaupunkiympäristö on.
+            </b>
+          </>
+        }
+      />
+      <Section
+        hideScrollHint
+        title="Kaupunkilainen!"
+        description="Vaadi viihtyisämpää kaupunkia. Et ole mitään velkaa autoilijoille."
       />
     </AppStyles>
   );

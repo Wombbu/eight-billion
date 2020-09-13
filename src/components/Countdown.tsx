@@ -5,6 +5,7 @@ type Props = {
   from: number;
   to: number;
   inMs: number;
+  shortDelay?: boolean;
 };
 
 function checkVisible(elm: any) {
@@ -27,11 +28,11 @@ export const Countdown = (props: Props) => {
     }
     const interval = setInterval(() => {
       if (checkVisible(ref.current)) {
-        setTimeout(() => setActive(true), 1000);
+        setTimeout(() => setActive(true), props.shortDelay ? 500 : 1000);
         clearInterval(interval);
       }
     }, 300);
-  }, [ref.current, setActive]);
+  }, [setActive, props.shortDelay]);
 
   React.useEffect(() => {
     if (!active) {

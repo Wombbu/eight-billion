@@ -14,6 +14,7 @@ export const Section = (props: {
   description?: React.ReactNode;
   children?: React.ReactNode;
   showTitleDesc?: boolean;
+  hideScrollHint?: boolean;
 }) => (
   <SectionWrapper>
     <div className="m-auto max-w-xl flex flex-col items-center justify-center">
@@ -41,7 +42,7 @@ export const Section = (props: {
         </p>
       )}
       {props.children}
-      <ScrollDownIndicator />
+      {props.hideScrollHint ? null : <ScrollDownIndicator />}
     </div>
   </SectionWrapper>
 );

@@ -4,22 +4,23 @@ import tw from "tailwind.macro";
 
 const BarItem = styled.div.attrs((p) => ({
   tabIndex: 0,
-  className: `flex flex-col cursor-pointer text-center items-center 
+  className: `flex cursor-pointer text-center items-center 
   justify-center bg-${p.color}-400 hover:bg-${p.color}-500
   text-gray-100 min-w-0 overflow-hidden
   whitespace-no-wrap`,
 }))<{ flex: number; color: string; title?: string }>`
   flex: ${(p) => p.flex};
   transition: all 0.2s;
-  min-height: 65px;
+  min-height: 40px;
   &:focus {
     min-width: 75%;
   }
-  &:after {
+  &:before {
     content: "";
   }
-  &:focus:after {
-    content: "${(p) => p.title}";
+  &:focus:before {
+    content: "${(p) => p.title},";
+    padding-right: 8px;
   }
 `;
 
