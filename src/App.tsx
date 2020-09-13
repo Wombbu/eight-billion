@@ -9,7 +9,7 @@ import { ShareBar } from "./components/ShareBar";
 
 const AppStyles = styled.div.attrs((p) => ({
   ...p,
-  className: `w-full m-auto max-w-xl flex flex-col items-center px-4`,
+  className: `flex flex-col items-stretch px-4`,
 }))`
   height: 100vh;
   overflow-y: scroll;
