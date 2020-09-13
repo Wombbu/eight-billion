@@ -19,7 +19,7 @@ export const Section = (props: {
     {props.title && (
       <div>
         {props.showTitleDesc && (
-          <p className="text-gray-700 font-serif leading-tight">Nettomaksua</p>
+          <p className="text-gray-500 font-serif leading-tight">Nettomaksua</p>
         )}
         <h1
           className={`font-serif pb-8 ${

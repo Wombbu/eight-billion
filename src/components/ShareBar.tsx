@@ -38,7 +38,7 @@ export const ShareBar = ({ items }: Props) => {
     .reduce((acc, value) => acc + value, 0);
 
   return (
-    <div className="w-full flex rounded-full overflow-hidden min-w-0">
+    <div className="w-full flex rounded-full overflow-hidden min-w-0 mb-8">
       {items.map((item) => (
         <BarItem
           flex={item.value / total}

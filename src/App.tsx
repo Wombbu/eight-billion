@@ -183,6 +183,7 @@ function App() {
             <Countdown from={0.2} to={-0.3} inMs={800} /> Miljardia
           </>
         }
+        description="Nettosaajaksi mentiin. Autoliitto valehtelee räikeästi"
       />
       <Section
         title="Asumisen hinta"
@@ -214,7 +215,7 @@ function App() {
         }
       />
       <Section
-        title="Hengityssairaudet"
+        title="Sairaudet"
         description={
           <>
             Vaikka moottoriteknologia on kehittnyt vuosien varrella,
@@ -231,7 +232,7 @@ function App() {
         showTitleDesc
         title={
           <>
-            <Countdown from={-0.4} to={-0.9} inMs={100} /> Miljardia
+            <Countdown from={-0.4} to={-0.9} inMs={800} /> Miljardia
           </>
         }
       />

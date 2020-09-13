@@ -58,15 +58,7 @@ export const Countdown = (props: Props) => {
   }, [props.from, props.to, props.inMs, active]);
 
   return (
-    <span
-      style={{
-        minWidth: number < 0 ? "90px" : "75px",
-        display: "inline-block",
-        textAlign: "left",
-      }}
-      ref={ref}
-      className={number < 0 ? "text-red-500" : ""}
-    >
+    <span ref={ref} className={number < 0 ? "text-red-500" : ""}>
       {number.toFixed(1)}
     </span>
   );
