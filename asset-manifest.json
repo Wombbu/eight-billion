@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Wombbu/eight-billion/static/css/main.41071068.chunk.css",
-    "main.js": "/Wombbu/eight-billion/static/js/main.ed0e3a29.chunk.js",
-    "main.js.map": "/Wombbu/eight-billion/static/js/main.ed0e3a29.chunk.js.map",
-    "runtime-main.js": "/Wombbu/eight-billion/static/js/runtime-main.0bc85702.js",
-    "runtime-main.js.map": "/Wombbu/eight-billion/static/js/runtime-main.0bc85702.js.map",
-    "static/js/2.4483008a.chunk.js": "/Wombbu/eight-billion/static/js/2.4483008a.chunk.js",
-    "static/js/2.4483008a.chunk.js.map": "/Wombbu/eight-billion/static/js/2.4483008a.chunk.js.map",
-    "index.html": "/Wombbu/eight-billion/index.html",
-    "precache-manifest.959b84fba6bd6c641f7b65bfb900a2e4.js": "/Wombbu/eight-billion/precache-manifest.959b84fba6bd6c641f7b65bfb900a2e4.js",
-    "service-worker.js": "/Wombbu/eight-billion/service-worker.js",
-    "static/css/main.41071068.chunk.css.map": "/Wombbu/eight-billion/static/css/main.41071068.chunk.css.map",
-    "static/js/2.4483008a.chunk.js.LICENSE.txt": "/Wombbu/eight-billion/static/js/2.4483008a.chunk.js.LICENSE.txt"
+    "main.css": "/eight-billion/static/css/main.41071068.chunk.css",
+    "main.js": "/eight-billion/static/js/main.ed0e3a29.chunk.js",
+    "main.js.map": "/eight-billion/static/js/main.ed0e3a29.chunk.js.map",
+    "runtime-main.js": "/eight-billion/static/js/runtime-main.8946137e.js",
+    "runtime-main.js.map": "/eight-billion/static/js/runtime-main.8946137e.js.map",
+    "static/js/2.98b78f03.chunk.js": "/eight-billion/static/js/2.98b78f03.chunk.js",
+    "static/js/2.98b78f03.chunk.js.map": "/eight-billion/static/js/2.98b78f03.chunk.js.map",
+    "index.html": "/eight-billion/index.html",
+    "precache-manifest.f5aab6eb152d604e817621b5c19a4dc3.js": "/eight-billion/precache-manifest.f5aab6eb152d604e817621b5c19a4dc3.js",
+    "service-worker.js": "/eight-billion/service-worker.js",
+    "static/css/main.41071068.chunk.css.map": "/eight-billion/static/css/main.41071068.chunk.css.map",
+    "static/js/2.98b78f03.chunk.js.LICENSE.txt": "/eight-billion/static/js/2.98b78f03.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0bc85702.js",
-    "static/js/2.4483008a.chunk.js",
+    "static/js/runtime-main.8946137e.js",
+    "static/js/2.98b78f03.chunk.js",
     "static/css/main.41071068.chunk.css",
     "static/js/main.ed0e3a29.chunk.js"
   ]
