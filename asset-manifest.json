@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/eight-billion/static/css/main.41071068.chunk.css",
-    "main.js": "/eight-billion/static/js/main.ed0e3a29.chunk.js",
-    "main.js.map": "/eight-billion/static/js/main.ed0e3a29.chunk.js.map",
+    "main.js": "/eight-billion/static/js/main.2842531c.chunk.js",
+    "main.js.map": "/eight-billion/static/js/main.2842531c.chunk.js.map",
     "runtime-main.js": "/eight-billion/static/js/runtime-main.8946137e.js",
     "runtime-main.js.map": "/eight-billion/static/js/runtime-main.8946137e.js.map",
     "static/js/2.98b78f03.chunk.js": "/eight-billion/static/js/2.98b78f03.chunk.js",
     "static/js/2.98b78f03.chunk.js.map": "/eight-billion/static/js/2.98b78f03.chunk.js.map",
     "index.html": "/eight-billion/index.html",
-    "precache-manifest.f5aab6eb152d604e817621b5c19a4dc3.js": "/eight-billion/precache-manifest.f5aab6eb152d604e817621b5c19a4dc3.js",
+    "precache-manifest.571b9ddd5e2ff2467564e254b954615f.js": "/eight-billion/precache-manifest.571b9ddd5e2ff2467564e254b954615f.js",
     "service-worker.js": "/eight-billion/service-worker.js",
     "static/css/main.41071068.chunk.css.map": "/eight-billion/static/css/main.41071068.chunk.css.map",
     "static/js/2.98b78f03.chunk.js.LICENSE.txt": "/eight-billion/static/js/2.98b78f03.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.8946137e.js",
     "static/js/2.98b78f03.chunk.js",
     "static/css/main.41071068.chunk.css",
-    "static/js/main.ed0e3a29.chunk.js"
+    "static/js/main.2842531c.chunk.js"
   ]
 }
