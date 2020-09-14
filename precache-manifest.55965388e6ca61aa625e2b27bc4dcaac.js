@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0a46237df3bf8dba11ae6e7e974b22af",
+    "revision": "56b1159c98f15ff5d950462aa664c529",
     "url": "/eight-billion/index.html"
   },
   {
-    "revision": "3b5f73ff60da070c5f90",
+    "revision": "7282fb9473b00d6c8b54",
     "url": "/eight-billion/static/css/main.41071068.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/eight-billion/static/js/2.98b78f03.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3b5f73ff60da070c5f90",
-    "url": "/eight-billion/static/js/main.2842531c.chunk.js"
+    "revision": "7282fb9473b00d6c8b54",
+    "url": "/eight-billion/static/js/main.fdc08cc6.chunk.js"
   },
   {
     "revision": "36aa39f6eddd7cf6bc08",
