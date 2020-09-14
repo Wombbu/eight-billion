@@ -40,12 +40,16 @@ export const Countdown = (props: Props) => {
     }
     const intervalMs = 20;
     const diff = props.from - props.to;
+    const decreasing = diff > 0;
     const ticks = Math.floor(props.inMs / intervalMs);
     const delta = diff / ticks;
 
     const interval = setInterval(() => {
       setNumber((val) => {
-        if (val <= props.to) {
+        if (
+          (decreasing && val <= props.to) ||
+          (!decreasing && val >= props.to)
+        ) {
           clearInterval(interval);
           return props.to;
         }

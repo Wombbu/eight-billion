@@ -61,7 +61,7 @@ function App() {
         showTitleDesc
         title={
           <>
-            <Countdown from={8} to={6.6} inMs={800} /> Miljardia
+            <Countdown from={8} to={6.6} inMs={800} shortDelay /> Miljardia
           </>
         }
         description={
@@ -235,10 +235,16 @@ function App() {
         description={
           <>
             Parkkinormien vuoksi esimerkiksi Helsingin kantakaupungissa
-            autopaikan rakennuskustannukset voivat olla 70 000 euroa paikkaa
-            kohti. Paikat eivät mene tuolla hinnalla kaupaksi, joten paikoista
-            tullut tappio leivotaan asuntojen hintoihin. Asumisen hintaa nostaa
-            myös melumittaukset sekä melueristäminen. Melu rajoittaa
+            autopaikan rakennuskustannukset voivat olla jopa{" "}
+            <a
+              href="https://www.rakennuslehti.fi/2015/12/yhden-pysakointipaikan-rakennuskustannukset-voivat-olla-jopa-70%E2%80%89000-euroa/"
+              target="blank"
+            >
+              70 000 euroa paikkaa kohti
+            </a>
+            . Paikat eivät mene tuolla hinnalla kaupaksi, joten paikoista tullut
+            tappio leivotaan asuntojen hintoihin. Asumisen hintaa nostaa myös
+            melumittaukset sekä melueristäminen. Melu rajoittaa
             huoneistosijoittelua kaupunkiasunnoissa. Kaupunkiasunnot ovat
             autoliikenteen melun takia rajoittuneemmin suunniteltuja.
             <br />
