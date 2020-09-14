@@ -91,7 +91,7 @@ function App() {
           items={[
             {
               value: 3269,
-              title: "Alv ja vakuutusverot",
+              title: "Alv, vakuutusverot",
               description:
                 "Arvonlisävero kerätään jokaisesta Suomessa ostetusta tavarasta, muun muassa ruoasta.",
             },
@@ -169,7 +169,7 @@ function App() {
         title="Sairaudet"
         description={
           <>
-            Vaikka moottoriteknologia on kehittnyt vuosien varrella,
+            Vaikka moottoriteknologia on kehittynyt vuosien varrella,
             kaupungeissa autoilu sairastuttaa ihmisiä. Autoliikenne jauhaa
             asfalttia kivipölyksi. Ihmiset sairastuvat katupölyn ohella
             hiukkasiin.
