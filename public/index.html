@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta property="og:title" content="Kahdeksan miljardia" />
+    <meta
+      property="og:description"
+      content="Mihin autoilijan maksamat verot käytetään?"
+    />
+    <meta property="og:image" content="%PUBLIC_URL%/share-img.png" />
+    <meta property="og:url" content="kahdeksan.miljardia.info" />
+    <meta name="twitter:title" content="Kahdeksan miljardia" />
+    <meta
+      name="twitter:description"
+      content="Mihin autoilijan maksamat verot käytetään?"
+    />
+    <meta name="twitter:image" content="%PUBLIC_URL%/share-img.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,11 +23,37 @@
       href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap"
       rel="stylesheet"
     />
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/fi_FI/sdk.js#xfbml=1&version=v8.0"
+      nonce="BVlYSlZS"
+    ></script>
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Mihin autoilijan maksamat verot käytetään?"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <script>
+      window.twttr = (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0],
+          t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function (f) {
+          t._e.push(f);
+        };
+
+        return t;
+      })(document, "script", "twitter-wjs");
+    </script>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -28,7 +68,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Kahdeksan miljardia</title>
   </head>
   <style>
     body {
@@ -39,6 +79,8 @@
     }
   </style>
   <body>
+    <div id="fb-root"></div>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

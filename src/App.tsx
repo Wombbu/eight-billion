@@ -274,7 +274,33 @@ function App() {
         hideScrollHint
         title="Kaupunkilainen!"
         description="Vaadi viihtyisämpää kaupunkia. Et ole mitään velkaa autoilijoille."
-      />
+      >
+        <div className="flex">
+          <div className="mr-4">
+            <a
+              className="twitter-share-button"
+              href="https://twitter.com/intent/tweet"
+              data-size="large"
+            >
+              Tweet
+            </a>
+          </div>
+          <div
+            className="fb-share-button"
+            data-href="http://kahdeksan.miljardia.info"
+            data-layout="button"
+            data-size="large"
+          >
+            <a
+              target="_blank"
+              href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fkahdeksan.miljardia.info%2F&amp;src=sdkpreparse"
+              className="fb-xfbml-parse-ignore"
+            >
+              Jaa
+            </a>
+          </div>
+        </div>
+      </Section>
     </AppStyles>
   );
 }
