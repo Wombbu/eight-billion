@@ -301,6 +301,29 @@ function App() {
           </div>
         </div>
       </Section>
+      <Section hideScrollHint>
+        <p className="text-gray-500 font-serif text-xs text-left pt-4">
+          Tämän sivuston on rakentanut yksityishenkilö jota ärsyttää Autoliiton{" "}
+          <a href="https://www.autoliitto.fi/tietoa-tienkayttajalle/vaalit">
+            tietoinen valehtelu
+          </a>{" "}
+          autoilun veroista ja kustannuksista.
+          <br />
+          <br />
+          Laskelmista on jätetty pois
+          <ul className="list-disc pl-3">
+            <li>
+              Liikkumattomuuden{" "}
+              <a href="https://www.ukkinstituutti.fi/tutkimus/liikuntatutkimus_suomessa/liikkumattomuuden-kustannukset">
+                aiheuttamat kustannukset
+              </a>{" "}
+              yhteiskunnalle (3.2 - 7 miljardia)
+            </li>
+            <li>Autojen ostamisen negatiivinen vaikutus kauppataseeseen</li>
+            <li>Ilmastovaikutukset</li>
+          </ul>
+        </p>
+      </Section>
     </AppStyles>
   );
 }
