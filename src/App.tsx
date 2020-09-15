@@ -9,6 +9,7 @@ import { ShareBar } from "./components/ShareBar";
 
 const AppStyles = styled.div.attrs((p) => ({
   ...p,
+  id: "app-container",
   className: `flex flex-col items-stretch px-4`,
 }))`
   height: 100vh;
@@ -31,6 +32,31 @@ const AppStyles = styled.div.attrs((p) => ({
 `;
 
 function App() {
+  React.useEffect(() => {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        // @ts-ignore
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+  }, []);
+
+  React.useEffect(() => {
+    const hash = document.location.hash.replace("#", "");
+    console.log(hash);
+    const element = document.getElementById(hash);
+    if (hash != null && element != null) {
+      console.log(element.getBoundingClientRect().top);
+      const container = document.getElementById("app-container");
+      // @ts-ignore
+      container.scrollTo({ top: element.getBoundingClientRect().top });
+    }
+  });
+
   return (
     <AppStyles>
       <Section
@@ -39,6 +65,7 @@ function App() {
           <>
             Autoilijat maksavat Suomeen vuosittain <b>kahdeksan miljardia</b>{" "}
             euroa veroina.
+            <a href="#perse"> juuha </a>
           </>
         }
       ></Section>
@@ -66,8 +93,8 @@ function App() {
         }
         description={
           <>
-            <b>Lähes 7 miljardia nettomaksua</b>. Autoilija näyttää olevan
-            todellinen nettomaksaja. Nyt perataan asia juurta jaksain.
+            Lähes 7 miljardia nettomaksua. Autoilija näyttää olevan todellinen
+            nettomaksaja. Nyt perataan asia juurta jaksain.
           </>
         }
       />
