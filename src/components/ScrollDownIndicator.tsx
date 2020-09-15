@@ -11,8 +11,8 @@ const bounce = keyframes`
   }
 `;
 
-const Wrapper = styled.div.attrs((p) => ({
-  className: "text-gray-400",
+const Wrapper = styled.a.attrs((p) => ({
+  className: "text-gray-400 cursor-pointer",
 }))`
   & svg {
     width: 30px;
@@ -26,11 +26,21 @@ const Wrapper = styled.div.attrs((p) => ({
     stroke: #cbd5e0;
     fill: transparent;
     stroke-width: 2px;
+    transition: stroke 0.15s;
+  }
+
+  &:hover path {
+    stroke: #a0aec0;
   }
 `;
 
-export const ScrollDownIndicator = () => (
-  <Wrapper>
+export const ScrollDownIndicator = ({ toId }: { toId: string }) => (
+  <Wrapper
+    onClick={() => {
+      // @ts-ignore
+      document.getElementById(toId)?.scrollIntoView({ behavior: "smooth" });
+    }}
+  >
     <svg>
       <path d="M0 10 L15 26 L30 10" />
     </svg>

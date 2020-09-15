@@ -32,51 +32,41 @@ const AppStyles = styled.div.attrs((p) => ({
 `;
 
 function App() {
-  React.useEffect(() => {
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        // @ts-ignore
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth",
-        });
-      });
-    });
-  }, []);
+  const wrapperRef = React.useRef(null);
 
   React.useEffect(() => {
     const hash = document.location.hash.replace("#", "");
-    console.log(hash);
     const element = document.getElementById(hash);
-    if (hash != null && element != null) {
-      console.log(element.getBoundingClientRect().top);
-      const container = document.getElementById("app-container");
-      // @ts-ignore
-      container.scrollTo({ top: element.getBoundingClientRect().top });
+    if (hash == null || element == null || wrapperRef == null) {
+      return;
     }
-  });
+    // @ts-ignore
+    wrapperRef.current.scrollTo({ top: element.getBoundingClientRect().top });
+  }, [wrapperRef.current]);
 
   return (
-    <AppStyles>
+    <AppStyles ref={wrapperRef}>
       <Section
+        id=""
+        nextId="tienpito"
         title="8 Miljardia"
         description={
           <>
             Autoilijat maksavat Suomeen vuosittain <b>kahdeksan miljardia</b>{" "}
             euroa veroina.
-            <a href="#perse"> juuha </a>
           </>
         }
       ></Section>
       <Section
+        id="tienpito"
+        nextId="nettomaksu"
         title="Tienpitoon miljardi"
         description={
           <>
             Autoliiton mukaan tästä summasta tienpitoon palaa kuitenkin{" "}
             <a
               href="https://www.autoliitto.fi/tietoa-tienkayttajalle/vaalit"
-              target="blank"
+              target="_blank"
             >
               vain miljardi
             </a>
@@ -85,6 +75,8 @@ function App() {
         }
       />
       <Section
+        id="nettomaksu"
+        nextId="verotuotto"
         showTitleDesc
         title={
           <>
@@ -99,13 +91,15 @@ function App() {
         }
       />
       <Section
+        id="verotuotto"
+        nextId="alv"
         title="Verotuotto"
         description={
           <>
             Autoalan tiedotuskeskuksen{" "}
             <a
               href="http://www.aut.fi/etusivu_vanha/tilastot/verotus_ja_hintakehitys/valtion_verotulot_tieliikenteesta"
-              target="blank"
+              target="_blank"
             >
               laskelmien mukaan
             </a>{" "}
@@ -142,10 +136,14 @@ function App() {
         />
       </Section>
       <Section
+        id="alv"
+        nextId="alv2"
         title="Alv?"
         description="Laskelmissa on laskettu mukaan arvonlisävero sekä vakuutusverot. Arvonlisäveroa maksetaan muun muassa ruoista, vaatteista sekä asumisesta. Vakuutusveroa maksetaan kaikista vakuutuksista, esimerkiksi kotivakuutuksesta"
       ></Section>
       <Section
+        id="alv2"
+        nextId="nettomaksu2"
         description={
           <>
             Vaatteista maksettua arvonlisäveroa ei palauteta vaatteidenkäytön
@@ -161,6 +159,8 @@ function App() {
         }
       ></Section>
       <Section
+        id="nettomaksu2"
+        nextId="kuolemat"
         showTitleDesc
         title={
           <>
@@ -169,13 +169,15 @@ function App() {
         }
       />
       <Section
+        id="kuolemat"
+        nextId="nettomaksu3"
         title="Kuolemat"
         description={
           <>
             Autoliikenteen aiheuttamien kuolemien sekä loukkaantumisien hinta
             yhteiskunnalle on vuodessa{" "}
             <a
-              target="blank"
+              target="_blank"
               href="http://liikennejarjestelma.fi/talous-ja-tehokkuus/kustannukset/liikenteen-ulkoiset-kustannukset/"
             >
               <b>2 miljardia euroa</b>
@@ -185,6 +187,8 @@ function App() {
         }
       ></Section>
       <Section
+        id="nettomaksu3"
+        nextId="sairaudet"
         showTitleDesc
         title={
           <>
@@ -193,6 +197,8 @@ function App() {
         }
       />
       <Section
+        id="sairaudet"
+        nextId="nettomaksu4"
         title="Sairaudet"
         description={
           <>
@@ -205,7 +211,7 @@ function App() {
             Hinta yhteiskunnalle{" "}
             <a
               href="http://liikennejarjestelma.fi/talous-ja-tehokkuus/kustannukset/liikenteen-ulkoiset-kustannukset/"
-              target="blank"
+              target="_blank"
             >
               puoli miljardia vuodessa
             </a>
@@ -213,6 +219,8 @@ function App() {
         }
       ></Section>
       <Section
+        id="nettomaksu4"
+        nextId="kunnat"
         showTitleDesc
         title={
           <>
@@ -221,6 +229,8 @@ function App() {
         }
       />
       <Section
+        id="kunnat"
+        nextId="nettomaksu5"
         title="Kunnat"
         description={
           <>
@@ -232,6 +242,8 @@ function App() {
         }
       ></Section>
       <Section
+        id="nettomaksu5"
+        nextId="matkakuluvähennys"
         showTitleDesc
         title={
           <>
@@ -240,6 +252,8 @@ function App() {
         }
       />
       <Section
+        id="matkakuluvähennys"
+        nextId="nettomaksu6"
         title="Matkakuluvähennys"
         description={
           <>
@@ -249,6 +263,8 @@ function App() {
         }
       ></Section>
       <Section
+        id="nettomaksu6"
+        nextId="asuminen"
         showTitleDesc
         title={
           <>
@@ -258,6 +274,8 @@ function App() {
         description="Autoilun verot eivät kata siitä aiheutuvia kuluja. Jatketaan kuitenkin vielä."
       />
       <Section
+        id="asuminen"
+        nextId="kaupungit"
         title="Asumisen hinta"
         description={
           <>
@@ -265,7 +283,7 @@ function App() {
             autopaikan rakennuskustannukset voivat olla jopa{" "}
             <a
               href="https://www.rakennuslehti.fi/2015/12/yhden-pysakointipaikan-rakennuskustannukset-voivat-olla-jopa-70%E2%80%89000-euroa/"
-              target="blank"
+              target="_blank"
             >
               70 000 euroa paikkaa kohti
             </a>
@@ -282,6 +300,8 @@ function App() {
         }
       ></Section>
       <Section
+        id="kaupungit"
+        nextId="loppu"
         description={
           <>
             Autoilun haitat keskittyvät kaupunkeihin. Etenkin kaupungeissa
@@ -298,7 +318,7 @@ function App() {
         }
       />
       <Section
-        hideScrollHint
+        id="loppu"
         title="Kaupunkilainen!"
         description="Vaadi viihtyisämpää kaupunkia. Et ole mitään velkaa autoilijoille."
       >
@@ -328,26 +348,42 @@ function App() {
           </div>
         </div>
       </Section>
-      <Section hideScrollHint>
-        <p className="text-gray-500 font-serif text-xs text-left pt-4">
+      <Section id="loppu" nextId="loppu2">
+        <p className="text-gray-500 font-serif text-xs pt-4 text-center pb-4">
           Tämän sivuston on rakentanut yksityishenkilö jota ärsyttää Autoliiton{" "}
-          <a href="https://www.autoliitto.fi/tietoa-tienkayttajalle/vaalit">
+          <a
+            target="_blank"
+            href="https://www.autoliitto.fi/tietoa-tienkayttajalle/vaalit"
+          >
             tietoinen valehtelu
           </a>{" "}
           autoilun veroista ja kustannuksista.
           <br />
           <br />
-          Laskelmista on jätetty pois
+          Voit ottaa sivuston tekijään yhteyden{" "}
+          <a target="_blank" href="https://twitter.com/laurinevanpera">
+            Twitterissä
+          </a>
+        </p>
+      </Section>
+      <Section id="loppu2">
+        <p className="text-gray-500 font-serif text-xs pt-4 text-left">
+          Tämän sivuston laskelmista on jätetty pois
           <ul className="list-disc pl-3">
             <li>
               Liikkumattomuuden{" "}
-              <a href="https://www.ukkinstituutti.fi/tutkimus/liikuntatutkimus_suomessa/liikkumattomuuden-kustannukset">
+              <a
+                href="https://www.ukkinstituutti.fi/tutkimus/liikuntatutkimus_suomessa/liikkumattomuuden-kustannukset"
+                target="_blank"
+              >
                 aiheuttamat kustannukset
               </a>{" "}
               yhteiskunnalle (3.2 - 7 miljardia)
             </li>
-            <li>Autojen ostamisen negatiivinen vaikutus kauppataseeseen</li>
-            <li>Ilmastovaikutukset</li>
+            <li>
+              Henkilöautoilun negatiivinen vaikutus valtion kauppataseeseen
+            </li>
+            <li>Henkilöautoilun ilmastovaikutukset</li>
           </ul>
         </p>
       </Section>

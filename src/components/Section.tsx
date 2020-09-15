@@ -14,10 +14,14 @@ export const Section = (props: {
   description?: React.ReactNode;
   children?: React.ReactNode;
   showTitleDesc?: boolean;
-  hideScrollHint?: boolean;
+  id?: string;
+  nextId?: string;
 }) => (
   <SectionWrapper>
-    <div className="m-auto max-w-xl flex flex-col items-center justify-center">
+    <div
+      className="m-auto max-w-xl flex flex-col items-center justify-center"
+      id={props.id}
+    >
       {props.title && (
         <div>
           {props.showTitleDesc && (
@@ -42,7 +46,7 @@ export const Section = (props: {
         </p>
       )}
       {props.children}
-      {props.hideScrollHint ? null : <ScrollDownIndicator />}
+      {props.nextId ? <ScrollDownIndicator toId={props.nextId} /> : null}
     </div>
   </SectionWrapper>
 );
