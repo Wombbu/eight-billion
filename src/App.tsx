@@ -253,7 +253,7 @@ function App() {
         showTitleDesc
         title={
           <>
-            <Countdown from={1.2} to={0.5} inMs={800} shortDelay /> miljardia
+            <Countdown from={1.2} to={0.7} inMs={800} shortDelay /> miljardia
           </>
         }
       />
@@ -290,7 +290,7 @@ function App() {
         showTitleDesc
         title={
           <>
-            <Countdown from={0.5} to={0.1} inMs={800} shortDelay /> miljardia
+            <Countdown from={0.7} to={0.3} inMs={800} shortDelay /> miljardia
           </>
         }
       />
@@ -311,7 +311,7 @@ function App() {
         showTitleDesc
         title={
           <>
-            <Countdown from={0.1} to={-0.4} inMs={800} shortDelay /> miljardia
+            <Countdown from={0.3} to={-0.2} inMs={800} shortDelay /> miljardia
           </>
         }
         description="Autoilun verot eivät kata siitä aiheutuvia kuluja. Jatketaan kuitenkin vielä."
