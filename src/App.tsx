@@ -49,7 +49,7 @@ function App() {
       <Section
         id=""
         nextId="tienpito"
-        title="8 Miljardia"
+        title="8 miljardia"
         description={
           <>
             Autoilijat maksavat Suomeen vuosittain <b>kahdeksan miljardia</b>{" "}
@@ -70,7 +70,7 @@ function App() {
             >
               vain miljardi
             </a>
-            . Tarkemmin 1.4 miljardia.
+            .
           </>
         }
       />
@@ -80,7 +80,7 @@ function App() {
         showTitleDesc
         title={
           <>
-            <Countdown from={8} to={6.6} inMs={800} shortDelay /> Miljardia
+            <Countdown from={8} to={7} inMs={800} shortDelay /> miljardia
           </>
         }
         description={
@@ -164,7 +164,7 @@ function App() {
         showTitleDesc
         title={
           <>
-            <Countdown from={6.6} to={3.3} inMs={1500} shortDelay /> Miljardia
+            <Countdown from={7} to={3.7} inMs={1500} shortDelay /> miljardia
           </>
         }
       />
@@ -192,7 +192,7 @@ function App() {
         showTitleDesc
         title={
           <>
-            <Countdown from={3.3} to={1.3} inMs={800} shortDelay /> Miljardia
+            <Countdown from={3.7} to={1.7} inMs={800} shortDelay /> miljardia
           </>
         }
       />
@@ -224,7 +224,7 @@ function App() {
         showTitleDesc
         title={
           <>
-            <Countdown from={1.3} to={0.8} inMs={800} shortDelay /> Miljardia
+            <Countdown from={1.7} to={1.2} inMs={800} shortDelay /> miljardia
           </>
         }
       />
@@ -236,24 +236,67 @@ function App() {
           <>
             Valtio hoitaa vain pääteitä. Kunnat rakentavat omalla rahallaan
             tiestönsä. Kunnat rahoittavat tiestönsä kunnallisverolla. Vuonna
-            2017 kunnat käyttivät tienpitoon n. 700 miljoonaa euroa. Tästä
-            arviolta 70%, eli <b>puoli miljardia</b> menee autoiluun
+            2014 kunnat käyttivät tienpitoon n.{" "}
+            <a
+              href="http://www.stat.fi/til/ktt/2014/ktt_2014_2015-11-20_fi.pdf"
+              target="_blank"
+            >
+              700 miljoonaa euroa
+            </a>
+            . Tästä arviolta 70%, eli <b>puoli miljardia</b> menee autoiluun
           </>
         }
       ></Section>
       <Section
         id="nettomaksu5"
+        nextId="melu"
+        showTitleDesc
+        title={
+          <>
+            <Countdown from={1.2} to={0.5} inMs={800} shortDelay /> miljardia
+          </>
+        }
+      />
+      <Section
+        id="melu"
+        nextId="nettomaksu6"
+        title="Melu"
+        description={
+          <>
+            Helsingin asukkaiden mukaan tieliikennemelu on häiritsevin
+            melumuoto.{" "}
+            <a
+              href="https://www.julkari.fi/bitstream/handle/10024/135521/Reinikainen%20ym.%202017%20LIMETKU_nettiversio%20%28tp%2037%29.pdf?sequence=1&isAllowed=y"
+              target="_blank"
+            >
+              34 prosenttia Helsinkiläisistä
+            </a>{" "}
+            kokee tieliikennemelun häiritseväksi tai erittäin häiritseväksi
+            päivisin ja 23 prosenttia öisin. Lähes puolet asukkaista koki melun
+            häiritsevän häiritsevän nukkumista, parvekkeella tai pihalla oloa,
+            rentoutumista ja ulkoilua virkistysalueilla. <br />
+            <br />
+            Ruotissa tehdyn tutkimuksen mukaan melualtistus aiheuttaa vuodessa
+            1.7 miljardin kulut yhteiskunnalle. Oletetaan, että Suomessa
+            kustannukset ovat puolet Ruotsin kustannuksista, ja oletetaan että
+            puolet tästä liittyy liikenteeseen. Kustannukset{" "}
+            <b>0.4 miljardia</b>
+          </>
+        }
+      ></Section>
+      <Section
+        id="nettomaksu6"
         nextId="matkakuluvähennys"
         showTitleDesc
         title={
           <>
-            <Countdown from={0.8} to={0.2} inMs={800} shortDelay /> Miljardia
+            <Countdown from={0.5} to={0.1} inMs={800} shortDelay /> miljardia
           </>
         }
       />
       <Section
         id="matkakuluvähennys"
-        nextId="nettomaksu6"
+        nextId="nettomaksu7"
         title="Matkakuluvähennys"
         description={
           <>
@@ -263,12 +306,12 @@ function App() {
         }
       ></Section>
       <Section
-        id="nettomaksu6"
+        id="nettomaksu7"
         nextId="asuminen"
         showTitleDesc
         title={
           <>
-            <Countdown from={0.2} to={-0.3} inMs={800} shortDelay /> Miljardia
+            <Countdown from={0.1} to={-0.4} inMs={800} shortDelay /> miljardia
           </>
         }
         description="Autoilun verot eivät kata siitä aiheutuvia kuluja. Jatketaan kuitenkin vielä."
@@ -384,6 +427,51 @@ function App() {
               Henkilöautoilun negatiivinen vaikutus valtion kauppataseeseen
             </li>
             <li>Henkilöautoilun ilmastovaikutukset</li>
+          </ul>
+          <br />
+          <br />
+          Lähdeluettelo
+          <ul>
+            <li>
+              <a
+                href="https://www.autoliitto.fi/tietoa-tienkayttajalle/vaalit"
+                target="_blank"
+              >
+                Autoliiton vaalivaikutus-sivu, jossa väite 8 vs 1 miljardia
+              </a>
+            </li>
+            <li>
+              <a
+                href="http://www.aut.fi/etusivu_vanha/tilastot/verotus_ja_hintakehitys/valtion_verotulot_tieliikenteesta"
+                target="_blank"
+              >
+                Autoalan tiedotuskeskuksen verolaskelma
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="http://liikennejarjestelma.fi/talous-ja-tehokkuus/kustannukset/liikenteen-ulkoiset-kustannukset/"
+              >
+                Kuolemat, loukkaantumiset, sairastumiset
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.julkari.fi/bitstream/handle/10024/135521/Reinikainen%20ym.%202017%20LIMETKU_nettiversio%20%28tp%2037%29.pdf?sequence=1&isAllowed=y"
+                target="_blank"
+              >
+                Tutkimus Helsinkiläisten kokemasta melusta
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.rakennuslehti.fi/2015/12/yhden-pysakointipaikan-rakennuskustannukset-voivat-olla-jopa-70%E2%80%89000-euroa/"
+                target="_blank"
+              >
+                Pysäköintipaikan rakennuskustannukset
+              </a>
+            </li>
           </ul>
         </p>
       </Section>
