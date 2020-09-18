@@ -276,7 +276,7 @@ function App() {
             häiritsevän häiritsevän nukkumista, parvekkeella tai pihalla oloa,
             rentoutumista ja ulkoilua virkistysalueilla. <br />
             <br />
-            Ruotissa tehdyn tutkimuksen mukaan melualtistus aiheuttaa vuodessa
+            Ruotsissa tehdyn tutkimuksen mukaan melualtistus aiheuttaa vuodessa
             1.7 miljardin kulut yhteiskunnalle. Oletetaan, että Suomessa
             kustannukset ovat puolet Ruotsin kustannuksista, ja oletetaan että
             puolet tästä liittyy liikenteeseen. Kustannukset{" "}
